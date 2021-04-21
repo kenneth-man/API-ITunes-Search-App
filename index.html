@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+
+        <title>#24 &mdash; ITunes Search App</title>
+    </head>
+
+    <body>  
+        <main class="column">
+            <section class="titles row">
+                <svg class="icon-large">
+                    <use href="./res/symbol-defs.svg#icon-appleinc"></use>
+                </svg>
+
+                <h1 class="h1">Apple ITunes API Searcher</h1>
+            </section>
+
+            <section class="search row">
+                <form class="column">
+                    <label for="name" class="row">
+                        <svg class="icon">
+                            <use href="./res/symbol-defs.svg#icon-laptop"></use>
+                        </svg>
+                            
+                        Search for a Music, Movie, Podcast, Audibook, tvShow or Artist name
+                    </label>
+
+                    <input type="text" name="name" class="transition rounded" id="search-input">
+                </form>
+              
+
+                <form class="column">
+                    <label for="country" class="row">
+                        <svg class="icon">
+                            <use href="./res/symbol-defs.svg#icon-globe"></use>
+                        </svg>
+                            
+                        Select a country to search in
+                    </label>
+
+                    <select name="countries" class="center transition rounded" id="search-select">
+                        <optgroup label="User">
+                            <option value="Current" selected>Current</option>
+                            <option disabled value="">__________</option>
+                        </optgroup>
+
+                        <optgroup label="Asia">
+                            <option value="CN">China</option>
+                            <option value="IN">India</option>
+                            <option value="JP">Japan</option>
+                            <option value="KR">S.Korea</option>
+                            <option value="VN">Vietnam</option>
+                            <option disabled value="">__________</option>
+                        </optgroup>
+
+                        <optgroup label="Europe">
+                            <option value="FR">France</option>
+                            <option value="DE">Germany</option>
+                            <option value="IT">Italy</option>
+                            <option value="ES">Spain</option>
+                            <option value="GB">Great Britain</option>
+                            <option disabled value="">__________</option>
+                        </optgroup>
+
+                        <optgroup label="Africa">
+                            <option value="NG">Nigeria</option>
+                            <option value="ET">Ethiopia</option>
+                            <option value="EG">Egypt</option>
+                            <option value="CD">DR Congo</option>
+                            <option value="TZ">Tanzania</option>
+                        </optgroup>
+
+                        <optgroup label="Americas">
+                            <option value="US">United States</option>
+                            <option value="BR">Brazil</option>
+                            <option value="MX">Mexico</option>
+                            <option value="CO">Colombia</option>
+                            <option value="AR">Argentina</option>
+                        </optgroup>
+                    </select>
+                </form>
+
+                <button class="btn btn-search center rounded transition" id="search-btn">
+                    <svg class="icon" style="margin-right: 0px; fill: #fff;">
+                        <use href="./res/symbol-defs.svg#icon-magnifying-glass"></use>
+                    </svg>
+                </button>
+
+                <h1 class="results-count">results - 0</h1>
+            </section>
+
+            <section class="results"></section>
+
+            <img src="./res/spinner.gif" class="spinner hidden">
+
+            <div class="popup center hidden">
+                <div class="popup__content column rounded">
+                    <div class="popup__row row">
+                        <div class="popup__row--text column">
+                            <h4 class="h4" id="popup-title">title: (sample)</h4>
+                            <h4 class="h4" id="popup-artist">artist: (sample)</h4>
+                            <h4 class="h4" id="popup-price">price: (sample)</h4>
+                            <h4 class="h4" id="popup-type">type: (sample)</h4>
+                            <h4 class="h4" id="popup-time">track time: (sample)</h4>
+                        </div>
+
+                        <img class="popup__row--img rounded" src="res/mac-demarco-test.jpg">
+                    </div>
+
+                    <a href="#" class="btn popup__btn center rounded transition">View in store</a>
+                </div>
+            </div>
+        </main>
+  
+        <script type="text/javascript" src="./script.js"></script>
+    </body>
+</html>
